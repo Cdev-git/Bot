@@ -7,7 +7,6 @@ import io
 from discord.ext import commands
 
 OWNER_ID = 1243374094385283085
-ALLOWED_IDS = [OWNER_ID, 1256555669985824799, 815988562464997397, 1407049985907884123]
 Website = "https://github.com/sigmaclient123-droid/LIQUID.CLIENT/releases/latest"
 TOKEN = "MTQ4MjkyODI4MTIyMDAyMjMwMw.GCWwgK.Pjxzj0DaR0TqrdnR7V6djDhabu5RGsTfROg00Y"
 
@@ -18,6 +17,7 @@ intents.members = True
 
 
 PREFIX = "-"
+ALLOWED_IDS = [OWNER_ID, 1256555669985824799, 815988562464997397, 1407049985907884123, 1432590680831688759]
 
 bot = commands.Bot(command_prefix=PREFIX, intents=intents, owner_id=OWNER_ID)
 
