@@ -99,10 +99,11 @@ async def Disable_reactions(ctx, channel: discord.TextChannel = None):
 # Download
 @bot.command()
 async def download(ctx):
+    Person = ctx.author.mention
     await ctx.message.delete()
 
     
-    await ctx.send(f"Install here [Download]({Website})", delete_after=10)
+    await ctx.send(f"{Person} Install here [Download]({Website})", delete_after=10)
 
 
 
