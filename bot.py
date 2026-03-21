@@ -54,6 +54,16 @@ async def ban(ctx, member: discord.Member, *, reason: str = "no reason given"):
     await member.ban(reason=reason)
     await ctx.send(f"Banned {member.mention}. Reason: {reason}. They're gone now")
 
+@bot.command()
+@is_allowed()
+async def meme2(ctx):
+    Video = "https://youtu.be/yLPSZE8hwgw"
+    await ctx.message.delete()
+
+
+    await ctx.send(f"[Meme]({Video})")
+
+
 # TEMPBAN
 @bot.command()
 @is_allowed()
