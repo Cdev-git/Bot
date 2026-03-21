@@ -183,7 +183,7 @@ async def say(ctx, *, text: str):
         await ctx.send(f"{Person} What do you want me to say?")
 
 
-Meme_path = "C:/Users/Cdev/Downloads/Python/7ks8tf.webp"
+Meme_path = "7ks8tf.webp"
 @bot.command()
 async def meme(ctx):
     Person = ctx.author.mention
