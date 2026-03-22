@@ -9,7 +9,7 @@ import time
 from discord.ext import commands
 
 OWNER_ID = 1243374094385283085
-Website = "https://github.com/sigmaclient123-droid/LIQUID.CLIENT/releases/latest"
+Download = "https://github.com/sigmaclient123-droid/LIQUID.CLIENT/releases/download/v1.2.6/liquid.client.dll"
 TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.default()
