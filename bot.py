@@ -198,6 +198,7 @@ async def meme(ctx):
 @bot.command()
 @is_allowed()
 async def giveaway(ctx, *, content: str):
+    ctx.message.delete()
     parts = [p.strip() for p in content.split('&') if p.strip()]
     if len(parts) < 2:
         await ctx.send("Usage: `-giveaway 30m & Prize name with many words here`")
