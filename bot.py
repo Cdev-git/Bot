@@ -10,6 +10,7 @@ from discord.ext import commands
 
 OWNER_ID = 1243374094385283085
 Website_latest = "https://github.com/sigmaclient123-droid/LIQUID.CLIENT/releases/download/v1.2.6/liquid.client.dll"
+Website = "https://github.com/sigmaclient123-droid/LIQUID.CLIENT/releases/latest"
 TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.default()
@@ -107,7 +108,13 @@ async def Disable_reactions(ctx, channel: discord.TextChannel = None):
 async def download(ctx):
     Person = ctx.author.mention
     await ctx.message.delete()
-    await ctx.send(f"{Person} Install here [Download]({Website_latest})", delete_after=10)
+    await ctx.send(f"{Person} Install here [Download]({Website})", delete_after=10)
+
+@bot.command()
+async def download(ctx):
+    Person = ctx.author.mention
+    await ctx.message.delete()
+    await ctx.send(f"{Person} Click to install the dll [Download]({Website_latest})", delete_after=10)
 
 # MUTE
 @bot.command()
