@@ -234,6 +234,7 @@ async def giveaway(ctx, *, content: str):
 @bot.command()
 @is_allowed()
 async def poll(ctx, *, content: str):
+    await ctx.message.delete()
     parts = [p.strip() for p in content.split('&') if p.strip()]
     if len(parts) < 3 or len(parts) > 11:
         await ctx.send("Usage: `-poll Question with words? & Option one & Option two & Option three` (2-10 options)")
