@@ -44,7 +44,7 @@ def parse_duration(duration: str) -> int:
 
 @bot.event
 async def on_ready():
-    print(f"Bot is up and running as {bot.user}! Ready for you and your friend.")
+    print(f"Bot running allowed ids' are {ALLOWED_IDS}")
 
 # BAN
 @bot.command()
@@ -52,7 +52,7 @@ async def on_ready():
 async def ban(ctx, member: discord.Member, *, reason: str = "no reason given"):
     await member.ban(reason=reason)
     await ctx.send(f"Banned {member.mention}. Reason: {reason}. They're gone now")
-
+# meme2
 @bot.command()
 @is_allowed()
 async def meme2(ctx):
@@ -87,20 +87,20 @@ async def kick(ctx, member: discord.Member, *, reason: str = "no reason given"):
 ##@is_allowed()
 ##async def Bot_token(ctx):
     ##await ctx.send(f"{TOKEN}")
-
+# allow reactions
 @bot.command()
 @is_allowed()
 async def Allow_reactions(ctx, channel: discord.TextChannel = None):
     channel = channel or ctx.channel
     await channel.set_permissions(ctx.guild.default_role, add_reactions=True)
-    await ctx.send(f"🔒 Locked down {channel.mention}. Reactions allowed!")
+    await ctx.send(f"{channel.mention}Reactions allowed!")
 
 @bot.command()
 @is_allowed()
 async def Disable_reactions(ctx, channel: discord.TextChannel = None):
     channel = channel or ctx.channel
     await channel.set_permissions(ctx.guild.default_role, add_reactions=False)
-    await ctx.send(f"🔒 Locked down {channel.mention}. No reactions allowed!")
+    await ctx.send(f"{channel.mention}No reactions allowed!")
 
 # Download
 @bot.command()
@@ -184,7 +184,7 @@ async def say(ctx, *, text: str):
         await ctx.send(text)
     else:
         await ctx.send(f"{Person} What do you want me to say?")
-
+# meme
 Meme_path = "7ks8tf.webp"
 @bot.command()
 async def meme(ctx):
