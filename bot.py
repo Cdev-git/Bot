@@ -111,7 +111,7 @@ async def download(ctx):
     await ctx.send(f"{Person} Install here [Download]({Website})", delete_after=10)
 
 @bot.command()
-async def download(ctx):
+async def downloadlink(ctx):
     Person = ctx.author.mention
     await ctx.message.delete()
     await ctx.send(f"{Person} Click to install the dll [Download]({Website_latest})", delete_after=10)
