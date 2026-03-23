@@ -1,5 +1,5 @@
 @echo off
-title Liquid Client dll installer
+title Liquid Client installer
 echo ========================================
 echo  Liquid Client installer!
 echo ========================================
