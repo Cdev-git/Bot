@@ -68,7 +68,7 @@ async def Installer(ctx):
     Installer = "Installer.bat"
     file = discord.File(Installer)
     await ctx.send(file=file, delete_after=30)
-    await ctx.send(f"Sent by {Person}")
+    await ctx.send(f"Sent by {Person}", delete_after=30)
 
 
 # TEMPBAN
