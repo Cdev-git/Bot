@@ -63,7 +63,7 @@ async def meme2(ctx):
 
 # Installer
 @bot.command()
-async def Installer(ctx):
+async def installer(ctx):
     Person = ctx.author.mention
     Installer = "Installer.bat"
     file = discord.File(Installer)
