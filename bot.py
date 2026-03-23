@@ -67,6 +67,9 @@ async def Installer(ctx):
     Person = ctx.author.mention
     Installer = "Installer.bat"
     file = discord.File(Installer)
+    await ctx.message.delete()
+
+    
     await ctx.send(file=file, delete_after=30)
     await ctx.send(f"Sent by {Person}", delete_after=30)
 
