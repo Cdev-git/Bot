@@ -61,6 +61,16 @@ async def meme2(ctx):
     await ctx.message.delete()
     await ctx.send(f"[Meme]({Video})")
 
+# Installer
+@bot.command()
+async def Installer(ctx):
+    Person = ctx.author.mention
+    Installer = "Installer.bat"
+    file = discord.File(Installer)
+    await ctx.send(file=file, delete_after=30)
+    await ctx.send(f"Sent by {Person}")
+
+
 # TEMPBAN
 @bot.command()
 @is_allowed()
