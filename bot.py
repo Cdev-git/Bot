@@ -62,16 +62,16 @@ async def meme2(ctx):
     await ctx.send(f"[Meme]({Video})")
 
 # Installer
-@bot.command()
-async def installer(ctx):
-    Person = ctx.author.mention
-    Installer = "Installer.bat"
-    file = discord.File(Installer)
-    await ctx.message.delete()
+#@bot.command()
+#async def installer(ctx):
+#    Person = ctx.author.mention
+ #   Installer = "Installer.bat"
+ #   file = discord.File(Installer)
+#    await ctx.message.delete()
 
     
-    await ctx.send(file=file, delete_after=30)
-    await ctx.send(f"Sent by {Person}", delete_after=30)
+#    await ctx.send(file=file, delete_after=30)
+ #   await ctx.send(f"Sent by {Person}", delete_after=30)
 
 
 # TEMPBAN
@@ -117,17 +117,17 @@ async def Disable_reactions(ctx, channel: discord.TextChannel = None):
     await ctx.send(f"{channel.mention}No reactions allowed!")
 
 # Download
-@bot.command()
-async def download(ctx):
-    Person = ctx.author.mention
-    await ctx.message.delete()
-    await ctx.send(f"{Person} Install here [Download]({Website})", delete_after=10)
+#@bot.command()
+#async def download(ctx):
+#    Person = ctx.author.mention
+#    await ctx.message.delete()
+#    await ctx.send(f"{Person} Install here [Download]({Website})", delete_after=10)
 # straight download
-@bot.command()
-async def downloadlink(ctx):
-    Person = ctx.author.mention
-    await ctx.message.delete()
-    await ctx.send(f"{Person} Click to install the dll [Download]({Website_latest})", delete_after=10)
+#@bot.command()
+#async def downloadlink(ctx):
+ #   Person = ctx.author.mention
+ #   await ctx.message.delete()
+  #  await ctx.send(f"{Person} Click to install the dll [Download]({Website_latest})", delete_after=10)
 
 # MUTE
 @bot.command()
