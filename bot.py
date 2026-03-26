@@ -61,6 +61,14 @@ async def meme2(ctx):
     await ctx.message.delete()
     await ctx.send(f"[Meme]({Video})")
 
+# meme2
+@bot.command()
+@is_allowed()
+async def horror(ctx):
+    ram = "https://www.amazon.com/G-SKILL-Trident-CL36-36-36-96-Desktop-Computer/dp/B0DN3WFS52/ref=sr_1_13?sr=8-13"
+    await ctx.message.delete()
+    await ctx.send(f"[Horror]({ram})")
+
 # Installer
 #@bot.command()
 #async def installer(ctx):
