@@ -63,7 +63,6 @@ async def meme2(ctx):
 
 # horror
 @bot.command()
-@is_allowed()
 async def horror(ctx):
     Pic = "What.png"
     ram = "https://www.amazon.com/G-SKILL-Trident-CL36-36-36-96-Desktop-Computer/dp/B0DN3WFS52/ref=sr_1_13?sr=8-13"
