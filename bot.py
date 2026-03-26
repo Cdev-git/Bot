@@ -68,7 +68,7 @@ async def horror(ctx):
     Pic = "What.png"
     ram = "https://www.amazon.com/G-SKILL-Trident-CL36-36-36-96-Desktop-Computer/dp/B0DN3WFS52/ref=sr_1_13?sr=8-13"
     await ctx.message.delete()
-    await ctx.send(f"[Horror]({ram})")
+    await ctx.send(f"[Horror]({ram})", delete_after=50)
 
     
     file = discord.File(Pic)
@@ -203,10 +203,10 @@ async def purge(ctx, amount: int):
     Person = ctx.author.mention
     if amount < 1:
         await ctx.message.delete()
-        await ctx.send(f"{Person}, amount has to be at least 1!", delete_after=3)
+        await ctx.send(f"{Person}, amount has to be at least 1!", delete_after=2)
         return
     await ctx.channel.purge(limit=amount + 1)
-    await ctx.send(f"🧹 Cleaned up {amount} messages.", delete_after=3)
+    await ctx.send(f"🧹 Cleaned up {amount} messages.", delete_after=2)
 
 # SAY
 @bot.command()
