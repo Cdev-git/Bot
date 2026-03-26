@@ -64,6 +64,7 @@ async def meme2(ctx):
 # horror
 @bot.command()
 async def horror(ctx):
+    Person = ctx.author.mention
     Pic = "What.png"
     ram = "https://www.amazon.com/G-SKILL-Trident-CL36-36-36-96-Desktop-Computer/dp/B0DN3WFS52/ref=sr_1_13?sr=8-13"
     await ctx.message.delete()
