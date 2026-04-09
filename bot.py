@@ -54,12 +54,12 @@ async def ban(ctx, member: discord.Member, *, reason: str = "no reason given"):
     await member.ban(reason=reason)
     await ctx.send(f"Banned {member.mention}. Reason: {reason}. They're gone now")
 
-Meme_path = "g.gif"
+path = "g.gif"
 @bot.command()
-async def meme(ctx):
+async def g(ctx):
     Person = ctx.author.mention
     await ctx.message.delete()
-    file = discord.File(Meme_path)
+    file = discord.File(path)
     await ctx.send(file=file, delete_after=50)
     await ctx.send(f"Sent by {Person}", delete_after=50)
 
